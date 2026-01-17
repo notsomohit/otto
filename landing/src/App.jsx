@@ -5,7 +5,6 @@ import HowItWorks from './components/HowItWorks';
 import Classification from './components/Classification';
 import Trust from './components/Trust';
 import OpenSource from './components/OpenSource';
-import Contributors from './components/Contributors';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 
@@ -20,7 +19,6 @@ function App() {
         <Classification />
         <Trust />
         <OpenSource />
-        <Contributors />
         <CTA />
       </main>
       <Footer />

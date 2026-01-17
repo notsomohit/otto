@@ -6,9 +6,9 @@ const CTA = () => {
           Ready to Browse with Confidence?
         </h2>
         <p className="text-lg text-primary-text/80 mt-4 mb-8 max-w-xl mx-auto">
-          Install Ollie today and take the first step towards understanding the web's fine print. It's free and always will be.
+          Install Otter today and take the first step towards understanding the web's fine print. It's free and always will be.
         </p>
-        <a href="#cta-button" className="bg-accent text-white px-10 py-4 rounded-md font-semibold text-xl hover:opacity-90 transition-opacity">
+        <a href="#" className="bg-accent text-white px-10 py-4 rounded-md font-semibold text-xl hover:opacity-90 transition-opacity">
           Add to Chrome for Free
         </a>
       </div>

@@ -12,7 +12,7 @@ const ProblemSolution = () => {
           <div className="space-y-4">
             <h3 className="font-serif text-3xl font-semibold">Our Solution</h3>
             <p className="text-lg text-primary-text/80">
-              Ollie reads the fine print for you. Our extension scans T&Cs and uses AI to classify each clause into simple categories, giving you an at-a-glance summary of what you’re agreeing to.
+              Otter reads the fine print for you. Our extension scans T&Cs and uses AI to classify each clause into simple categories, giving you an at-a-glance summary of what you’re agreeing to.
             </p>
           </div>
         </div>

@@ -11,14 +11,14 @@ const HowItWorks = () => {
             <span className="text-3xl font-serif text-secondary-accent">1</span>
           </div>
           <h3 className="text-xl font-semibold font-serif mb-2">Install the Extension</h3>
-          <p className="text-primary-text/80">Get Ollie from the Chrome Web Store in just a few clicks.</p>
+          <p className="text-primary-text/80">Get Otter from the Chrome Web Store in just a few clicks.</p>
         </div>
         <div className="text-center">
           <div className="flex items-center justify-center mx-auto mb-4 w-20 h-20 border-2 border-border-color rounded-full">
             <span className="text-3xl font-serif text-secondary-accent">2</span>
           </div>
           <h3 className="text-xl font-semibold font-serif mb-2">Browse T&Cs</h3>
-          <p className="text-primary-text/80">Navigate to any Terms & Conditions page. Ollie will activate automatically.</p>
+          <p className="text-primary-text/80">Navigate to any Terms & Conditions page. Otter will activate automatically.</p>
         </div>
         <div className="text-center">
           <div className="flex items-center justify-center mx-auto mb-4 w-20 h-20 border-2 border-border-color rounded-full">

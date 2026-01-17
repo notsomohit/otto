@@ -14,8 +14,8 @@ export default {
         'border-color': 'rgba(43, 30, 30, 0.15)',
       },
       fontFamily: {
-        serif: ['serif'],
-        sans: ['sans-serif'],
+        serif: ['Merriweather', 'serif'],
+        sans: ['Ubuntu', 'sans-serif'],
       },
     },
   },
