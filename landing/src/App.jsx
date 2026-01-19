@@ -13,13 +13,33 @@ function App() {
     <div className="bg-background text-primary-text font-sans">
       <Navbar />
       <main>
-        <Hero />
-        <ProblemSolution />
-        <HowItWorks />
-        <Classification />
-        <Trust />
-        <OpenSource />
-        <CTA />
+        <div id="hero">
+          <Hero />
+        </div>
+        <hr className="border-t border-border-color" />
+        <div id="problem-solution">
+          <ProblemSolution />
+        </div>
+        <hr className="border-t border-border-color" />
+        <div id="how-it-works">
+          <HowItWorks />
+        </div>
+        <hr className="border-t border-border-color" />
+        <div id="classification">
+          <Classification />
+        </div>
+        <hr className="border-t border-border-color" />
+        <div id="trust">
+          <Trust />
+        </div>
+        <hr className="border-t border-border-color" />
+        <div id="open-source">
+          <OpenSource />
+        </div>
+        <hr className="border-t border-border-color" />
+        <div id="cta">
+          <CTA />
+        </div>
       </main>
       <Footer />
     </div>
