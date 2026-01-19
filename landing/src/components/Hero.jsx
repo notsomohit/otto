@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex justify-center md:justify-end">
-          <img src={heroIllustration} alt="Otter reading terms" className="max-w-full h-auto drop-shadow-xl" />
+          <img src={heroIllustration} alt="Otter reading terms" className="max-w-sm h-auto drop-shadow-xl" />
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import logo from '../assets/logo.png';
+import { Github } from 'lucide-react';
 
 const Navbar = () => {
   return (
@@ -10,10 +11,13 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <a href="#how-it-works" className="hover:text-accent transition-colors">How it works</a>
           <a href="#privacy" className="hover:text-accent transition-colors">Privacy</a>
-          <a href="https://github.com/pushkarscripts/otto" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">GitHub</a>
+          <a href="https://github.com/notsomohit/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-accent transition-colors">
+            <Github className="h-5 w-5" />
+            <span>Contact Us</span>
+          </a>
         </div>
         <a href="#cta" className="bg-accent text-white px-6 py-2 rounded-md font-semibold hover:opacity-90 transition-opacity">
-          Add to Chrome
+          Add to Chrome (Coming Soon)
         </a>
       </nav>
     </header>
