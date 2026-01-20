@@ -1,11 +1,13 @@
-# Terms & Conditions Analyzer
+# 🦦 Otto 
+> **Your AI-powered legal assistant that reads the fine print so you don't have to.**
 
-A Chrome Extension that analyzes Terms & Conditions (or any legal text) on a webpage using Google's Gemini AI to identify risks and summarize key points.
+Otto is a friendly Chrome Extension that analyzes Terms & Conditions, Privacy Policies, and other legal texts using Google's Gemini AI. It identifies risks, detects "dark patterns," and summarizes key points to help you protect your digital rights.
 
-## Project Structure
+## 🏗️ Project Structure
 
 *   **`extension/`**: Chrome Extension (Manifest V3, React, TypeScript, Vite, Tailwind CSS).
 *   **`backend/`**: Node.js Backend (Fastify, TypeScript, Gemini SDK, Zod).
+*   **`landing/`**: The project's landing/marketing page.
 
 ### System Architecture
 
@@ -32,68 +34,87 @@ graph TD
     Chrome -- "Display Report" --> User
 ```
 
-## Prerequisites
+## 🚀 Setup & Installation
 
-*   Node.js (v18 or higher)
-*   Google Gemini API Key (Get one at [aistudio.google.com](https://aistudio.google.com/))
+You can set up Otto using **Docker (Recommended)** or manually using Node.js.
 
-## Setup & Running
+### Prerequisites
+*   **Google Gemini API Key**: Get one for free at [aistudio.google.com](https://aistudio.google.com/).
+*   **Docker Desktop** (for Docker setup) **OR** **Node.js v18+** (for manual setup).
 
-### 1. Backend Setup
+---
 
-The backend handles the communication with the Gemini API to keep your API key secure.
+### Option 1: Docker Setup (Recommended)
+*No need to install Node.js on your machine!*
 
-1.  Navigate to the backend directory:
-    ```bash
-    cd backend
-    ```
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
-3.  Configure your environment variables:
-    *   Open `.env` file (created automatically)
-    *   Add your Gemini API Key: `GEMINI_API_KEY=your_actual_api_key_here`
-4.  Start the server:
-    ```bash
-    npm run dev
-    ```
-    The server will run on `http://localhost:3000`.
+#### 1. Configure the API Key
+Navigate to the `backend/` folder and create a file named `.env`:
+```bash
+GEMINI_API_KEY=your_actual_api_key_here
+```
 
-### 2. Extension Setup
+#### 2. Start the Backend
+Open a terminal in the project root and run:
+```bash
+docker-compose up --build
+```
+The server is now running at `http://localhost:3000`. Keep this terminal open.
 
-1.  Navigate to the extension directory:
-    ```bash
-    cd extension
-    ```
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
-3.  Build the extension:
-    ```bash
-    npm run build
-    ```
-    This creates a `dist` folder.
+#### 3. Build the Extension
+Open a **new** terminal in the project root and run this command to build the extension using a temporary container:
 
-### 3. Loading into Chrome
+**Windows (PowerShell):**
+```powershell
+docker run --rm -v "${PWD}\extension:/app" -w /app node:20-alpine /bin/sh -c "npm install && npm run build"
+```
 
-1.  Open Google Chrome and go to `chrome://extensions/`.
+**Mac/Linux:**
+```bash
+docker run --rm -v "$(pwd)/extension:/app" -w /app node:20-alpine /bin/sh -c "npm install && npm run build"
+```
+
+---
+
+### Option 2: Manual Setup
+*Requires Node.js v18+ installed.*
+
+#### 1. Backend Setup
+```bash
+cd backend
+npm install
+# Create .env file with GEMINI_API_KEY=...
+npm run dev
+```
+
+#### 2. Extension Setup
+```bash
+cd extension
+npm install
+npm run build
+```
+
+---
+
+### 📂 Loading into Chrome
+Once you have built the extension (using either method above), you will have a `dist` folder inside `extension/`.
+
+1.  Open Chrome and go to `chrome://extensions/`.
 2.  Enable **Developer mode** (toggle in the top right).
 3.  Click **Load unpacked**.
-4.  Select the `extension/dist` folder you just built.
+4.  Select the **`extension/dist`** folder.
 
-## Usage
+## 🦦 Usage
 
-1.  Ensure the backend server is running (`npm run dev` in `backend/`).
+1.  Ensure the backend server is running.
 2.  Navigate to any webpage containing Terms & Conditions (e.g., a signup page or footer link).
-3.  Click the **Otter** icon in your Chrome toolbar.
+3.  Click the **Otto** icon in your Chrome toolbar.
 4.  Click **Analyze Terms**.
-5.  Watch the mascot react as it reads, thinks, and presents the risk assessment!
+5.  Watch Otto react as he reads, thinks, and presents the risk assessment!
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 *   **Frontend**: React, Tailwind CSS, Vite
 *   **Backend**: Node.js, Fastify, Zod
 *   **AI**: Google Gemini (via `@google/genai` SDK)
+*   **Containerization**: Docker & Docker Compose
 *   **Language**: TypeScript throughout
